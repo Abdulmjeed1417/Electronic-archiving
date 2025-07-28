@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الأرشفة الإلكترونية</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>نظام الأرشفة الإلكترونية</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">لوحة التحكم</a></li>
+                <li><a href="#sections">الأقسام</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="#settings">الإعدادات</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>تسجيل الدخول</h2>
+            <form id="login-form">
+                <input type="text" name="username" placeholder="اسم المستخدم" required>
+                <input type="password" name="password" placeholder="كلمة المرور" required>
+                <button type="submit">دخول</button>
+            </form>
+        </section>
+
+        <section id="dashboard">
+            <h2>لوحة التحكم</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>الأقسام</h3>
+                    <p>5</p>
+                </div>
+                <div class="stat">
+                    <h3>الملفات</h3>
+                    <p>120</p>
+                </div>
+                <div class="stat">
+                    <h3>المستخدمين</h3>
+                    <p>10</p>
+                </div>
+            </div>
+            <div class="reports">
+                <h3>التقارير</h3>
+                <button>طباعة تقرير الملفات بالأقسام</button>
+                <button>طباعة تقرير المستخدمين النشطين</button>
+            </div>
+        </section>
+
+        <section id="sections">
+            <h2>الأقسام</h2>
+            <button>إضافة قسم جديد</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>اسم القسم</th>
+                        <th>عدد الملفات</th>
+                        <th>إجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>قسم المحاسبة</td>
+                        <td>30</td>
+                        <td><button>عرض</button> <button>رفع ملف</button></td>
+                    </tr>
+                    <tr>
+                        <td>قسم الموارد البشرية</td>
+                        <td>50</td>
+                        <td><button>عرض</button> <button>رفع ملف</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="search">
+            <h2>البحث</h2>
+            <form>
+                <input type="text" placeholder="اسم الملف">
+                <input type="text" placeholder="القسم">
+                <input type="text" placeholder="السنة">
+                <button type="submit">بحث</button>
+            </form>
+            <div class="search-results">
+                </div>
+        </section>
+
+        <section id="settings">
+            <h2>الإعدادات</h2>
+            <div>
+                <label for="font-size">حجم الخط:</label>
+                <select id="font-size">
+                    <option value="small">صغير</option>
+                    <option value="medium" selected>متوسط</option>
+                    <option value="large">كبير</option>
+                </select>
+            </div>
+            <div>
+                <label for="language">اللغة:</label>
+                <select id="language">
+                    <option value="ar" selected>العربية</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div>
+                <label for="theme">السمة:</label>
+                <select id="theme">
+                    <option value="light" selected>فاتح</option>
+                    <option value="dark">داكن</option>
+                </select>
+            </div>
+            <button>تغيير كلمة المرور</button>
+            <button>إنشاء نسخة احتياطية</button>
+            <button>رفع نسخة احتياطية</button>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
